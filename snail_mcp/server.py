@@ -1,8 +1,8 @@
 from pathlib import Path
 from mcp.server.fastmcp import FastMCP
-from mcp.excel.read import read_excel as _read_excel
+from .excel.read import read_excel as _read_excel
 
-mcp = FastMCP("snail-mcp", description="General-purpose MCP server with multiple tools. Extensible for more data/file operations.")
+mcp = FastMCP("snail-mcp")
 
 READ_EXCEL_DESC = """Read cell data from a .xlsx workbook with configurable output fields and format.
 

@@ -22,11 +22,18 @@ or (with venv activated) run the script directly:
 snail-mcp
 ```
 
-Alternative: `uv run python -m mcp.server`
+Alternative: `uv run python -m snail_mcp.server`
 
 ## Run via uvx
 
 ```bash
+uvx snail-mcp
+```
+
+If you see `ImportError: cannot import name 'main' from 'mcp.server'`, the cached package is old. Clear cache then retry:
+
+```bash
+uv cache clean snail-mcp
 uvx snail-mcp
 ```
 

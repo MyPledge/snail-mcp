@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "snail-mcp"
+version = "0.1.0"
+description = "General-purpose MCP server (Excel read and more)."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = ["openpyxl", "mcp"]
+
+[project.scripts]
+snail-mcp = "mcp.server:main"
+read_excel = "mcp.excel.read:_main"
+mcp-server = "mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["mcp"]
